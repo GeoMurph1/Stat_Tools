@@ -1,2 +1,2 @@
 # Stat_Tools
- General repository for Python scripts
+ Repository for various scripts for statistical analysis and EDA.
