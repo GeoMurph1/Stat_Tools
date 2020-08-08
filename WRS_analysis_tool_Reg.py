@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Apr 21 12:09:04 2020
-
 @author: Michael Murphy
 """
 
-# Wilcoxon Rank-sum calculator. 
+# Wilcoxon Rank-sum calculator for environmental datasets. Input consists of pandas-readable flat file with 'PARAMNAME', 'Sys_Loc_Code', and 'Result'.
+# Script parses unique pairs of locations ('Sys_Loc_Code') and for each pair-parameter combination, calculates Wilcoxon rank-sum comparison and tabulates results. 
 
 import numpy as np
 import pandas as pd
@@ -24,7 +23,7 @@ from scipy.stats import ranksums as rsums
 # Update version suffix as needed: 
 ver = "_01a"
 # Update filename as needed:
-f1 =  "SMR_TrendAnalysisInputTable_20200612.xlsx"
+f1 =  "Data.xlsx"
 ###############################################################################
 df1 = pd.read_excel(f1)
 print(df1.shape)
